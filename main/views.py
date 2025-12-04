@@ -1,9 +1,14 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+    from django.shortcuts import render
+    from django.http import HttpResponse
 
-# Create your views here.
+    # Create your views here.
 
-def home(request):
-    print("======"
-    "Someone visited home page=======")
-    return HttpResponse ("This is home page")
+    def home(request):
+        return render (request, 'main/home.html')
+
+    def contact(request):
+        return render (request, 'main/contact.html')
+
+
+    def about(request):
+        return render (request, 'main/abou.html')
